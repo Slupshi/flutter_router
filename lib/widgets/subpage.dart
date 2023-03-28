@@ -18,6 +18,9 @@ class SubPage extends StatelessWidget {
           CustomNavigationRail(
             isSubNav: true,
             backgroundColor: Colors.green,
+            foreground: Colors.white,
+            selectedBackground: Colors.greenAccent,
+            selectedForeground: Colors.white,
             destinations: const [
               NavItem(
                 icon: Icons.two_k,

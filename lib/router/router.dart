@@ -65,6 +65,10 @@ final GoRouter router = GoRouter(
 );
 
 _buildNav() => const CustomNavigationRail(
+      foreground: Colors.white,
+      backgroundColor: Colors.red,
+      selectedForeground: Colors.white,
+      selectedBackground: Colors.redAccent,
       destinations: [
         NavItem(
           icon: Icons.home,
