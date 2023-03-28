@@ -4,6 +4,7 @@ import 'package:flutter_router/widgets/navigation/nav_button.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomNavigationRail extends StatefulWidget {
+  final bool isSubNav;
   final List<NavItem> destinations;
   final String selectedRoute;
   final Color backgroundColor;
@@ -12,6 +13,7 @@ class CustomNavigationRail extends StatefulWidget {
     required this.destinations,
     required this.selectedRoute,
     this.backgroundColor = Colors.red,
+    this.isSubNav = false,
   });
 
   @override
@@ -30,7 +32,9 @@ class _CustomNavigationRailState extends State<CustomNavigationRail> {
 
   void go(String route) {
     setState(() {
-      selectedRoute = route;
+      if (!widget.isSubNav) {
+        selectedRoute = route;
+      }
     });
     context.go(route);
   }
